@@ -36,6 +36,7 @@
     "url": "https://github.com/ardasevinc/fastify-telegraf/issues"
   },
   "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
     "fastify-plugin": "^4.5.1",
     "telegraf": "^4.16.3",
     "undici": "^6.19.2"

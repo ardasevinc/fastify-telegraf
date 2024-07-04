@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fastify/type-provider-typebox':
+        specifier: ^4.0.0
+        version: 4.0.0(@sinclair/typebox@0.32.34)
       fastify-plugin:
         specifier: ^4.5.1
         version: 4.5.1
@@ -86,6 +89,11 @@ packages:
 
   '@fastify/merge-json-schemas@0.1.1':
     resolution: {integrity: sha512-fERDVz7topgNjtXsJTTW1JKLy0rhuLRcquYqNR9rF7OcVpCa2OVW49ZPDIhaRRCaUuvVxI+N416xUoF76HNSXA==}
+
+  '@fastify/type-provider-typebox@4.0.0':
+    resolution: {integrity: sha512-kTlN0saC/+xhcQPyBjb3YONQAMjiD/EHlCRjQjsr5E3NFjS5K8ZX5LGzXYDRjSa+sV4y8gTL5Q7FlObePv4iTA==}
+    peerDependencies:
+      '@sinclair/typebox': '>=0.26 <=0.32'
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -211,6 +219,9 @@ packages:
   '@sigstore/verify@1.2.1':
     resolution: {integrity: sha512-8iKx79/F73DKbGfRf7+t4dqrc0bRr0thdPrxAtCKWRm/F0tG71i6O1rvlnScncJLLBZHn3h8M3c1BSUAb9yu8g==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  '@sinclair/typebox@0.32.34':
+    resolution: {integrity: sha512-a3Z3ytYl6R/+7ldxx04PO1semkwWlX/8pTqxsPw4quIcIXDFPZhOc1Wx8azWmkU26ccK3mHwcWenn0avNgAKQg==}
 
   '@tapjs/after-each@3.0.3':
     resolution: {integrity: sha512-gg+TwlnnNhXkyWMLW9iF7O2U01RYLBwzvsLM2ZwP8f8yS/sH6rjTxYxik6v+mQFvvsoawWrZ5X594pVJUQp80A==}
@@ -2401,6 +2412,10 @@ snapshots:
     dependencies:
       fast-deep-equal: 3.1.3
 
+  '@fastify/type-provider-typebox@4.0.0(@sinclair/typebox@0.32.34)':
+    dependencies:
+      '@sinclair/typebox': 0.32.34
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -2564,6 +2579,8 @@ snapshots:
       '@sigstore/bundle': 2.3.2
       '@sigstore/core': 1.1.0
       '@sigstore/protobuf-specs': 0.3.2
+
+  '@sinclair/typebox@0.32.34': {}
 
   '@tapjs/after-each@3.0.3(@tapjs/core@3.0.3(@types/node@20.14.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:
