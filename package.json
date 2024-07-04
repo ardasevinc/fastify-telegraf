@@ -8,7 +8,9 @@
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "tap --no-cov test/**/*.test.js"
+    "test": "tap --no-cov test/**/*.test.js",
+    "prebuild": "rimraf ./dist",
+    "build": "pnpm run prebuild && tsc -p ./tsconfig.json; tsc-alias -p ./tsconfig.json"
   },
   "engines": {
     "node": ">=20",
@@ -45,8 +47,10 @@
     "@ardasevinc/prettier-config": "^0.1.4",
     "@types/node": "^20.14.9",
     "fastify": "^4.28.1",
+    "rimraf": "^5.0.7",
     "standard": "^17.1.0",
     "tap": "^20.0.3",
+    "tsc-alias": "^1.8.10",
     "typescript": "^5.5.3"
   },
   "prettier": "@ardasevinc/prettier-config"

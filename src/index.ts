@@ -1,7 +1,4 @@
-import {
-  Type,
-  FastifyPluginAsyncTypebox,
-} from '@fastify/type-provider-typebox';
+import { FastifyPluginAsyncTypebox } from '@fastify/type-provider-typebox';
 import { type FastifyTelegrafOptions } from '@/types/plugin.js';
 
 import { setTimeout as timeout } from 'node:timers/promises';
@@ -10,7 +7,7 @@ import fp from 'fastify-plugin';
 
 import { Telegraf } from 'telegraf';
 
-const fastifyTelegraf: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
+const fastifyTelegrafPlugin: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
   async function (app, options) {
     const {
       decoratorBotName = 'telegramBot',
@@ -119,11 +116,9 @@ const fastifyTelegraf: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
     });
   };
 
-const plugin = fp(fastifyTelegraf, {
+const fastifyTelegraf = fp(fastifyTelegrafPlugin, {
   name: 'fastify-telegraf',
   fastify: '^4.0.x',
 });
 
-module.exports = plugin;
-module.exports.default = plugin;
-module.exports.fastifyOverview = plugin;
+export { fastifyTelegraf, FastifyTelegrafOptions };
