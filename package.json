@@ -41,10 +41,12 @@
     "undici": "^6.19.2"
   },
   "devDependencies": {
+    "@ardasevinc/prettier-config": "^0.1.4",
     "@types/node": "^20.14.9",
     "fastify": "^4.28.1",
     "standard": "^17.1.0",
     "tap": "^20.0.3",
     "typescript": "^5.5.3"
-  }
+  },
+  "prettier": "@ardasevinc/prettier-config"
 }
