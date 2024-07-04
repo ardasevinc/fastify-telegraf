@@ -121,4 +121,7 @@ const fastifyTelegraf = fp(fastifyTelegrafPlugin, {
   fastify: '^4.0.x',
 });
 
+// TODO: re-export telegraf and all of its subpackages
+// just like, @fastity/type-provider-typebox, this package
+// should export telegraf to mitigate version mismatches
 export { fastifyTelegraf, FastifyTelegrafOptions };
