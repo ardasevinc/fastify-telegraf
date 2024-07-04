@@ -6,7 +6,9 @@ const TFastifyTelegrafOptions = Type.Object({
   baseUrl: Type.Optional(Type.String()),
   webhookSecret: Type.Optional(Type.String()),
   botToken: Type.Readonly(Type.String()),
-  onUnhandledError: Type.Optional(Type.Function([Type.Any()], Type.Void())),
+  onUnhandledError: Type.Optional(
+    Type.Function([Type.Any(), Type.Any()], Type.Void()),
+  ),
 });
 
 type FastifyTelegrafOptions = Static<typeof TFastifyTelegrafOptions>;
