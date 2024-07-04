@@ -12,6 +12,7 @@
     "prebuild": "rimraf ./dist",
     "build": "pnpm run prebuild && tsc -p ./tsconfig.json; tsc-alias -p ./tsconfig.json"
   },
+  "files": ["./dist/**/*.js", "./dist/**/*.ts"],
   "engines": {
     "node": ">=20",
     "pnpm": ">=9"
