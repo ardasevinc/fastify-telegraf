@@ -1,8 +1,8 @@
 {
-  "name": "@eomm/fastify-telegram",
+  "name": "@ardasevinc/fastify-telegraf",
   "access": "public",
-  "version": "1.1.0",
-  "description": "Create and manage a Telegram bot, easily",
+  "version": "1.2.0",
+  "description": "Fastify Telegraf, forked to update telegraf",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
@@ -16,16 +16,19 @@
     "fastify-plugin",
     "telegraf"
   ],
-  "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
+  "author": {
+    "name": "Arda Sevinc",
+    "email": "arda@ardasevinc.com",
+    "url": "https://github.com/ardasevinc"
+  }, 
   "license": "MIT",
-  "homepage": "https://github.com/Eomm/fastify-telegram#readme",
+  "homepage": "https://github.com/ardasevinc/fastify-telegraf#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eomm/fastify-telegram.git"
+    "url": "git+https://github.com/ardasevinc/fastify-telegraf.git"
   },
-  "funding": "https://github.com/Eomm/fastify-telegram?sponsor=1",
   "bugs": {
-    "url": "https://github.com/Eomm/fastify-telegram/issues"
+    "url": "https://github.com/ardasevinc/fastify-telegraf/issues"
   },
   "dependencies": {
     "fastify-plugin": "^4.5.1",
