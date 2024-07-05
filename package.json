@@ -1,13 +1,21 @@
 {
   "name": "@ardasevinc/fastify-telegraf",
   "access": "public",
-  "version": "1.2.0",
-  "description": "Fastify Telegraf, forked to update telegraf",
-  "main": "index.js",
+  "version": "1.3.3",
+  "description": "Pure ESM, modern fork of @eomm/fastify-telegram",
+  "exports": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "tap --no-cov test/**/*.test.js"
+    "test": "tap --no-cov test/**/*.test.js",
+    "prebuild": "rimraf ./dist",
+    "build": "pnpm run prebuild && tsc -p ./tsconfig.json; tsc-alias -p ./tsconfig.json"
+  },
+  "files": ["./dist/**/*.js", "./dist/**/*.ts"],
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   },
   "keywords": [
     "fastify",
@@ -20,7 +28,7 @@
     "name": "Arda Sevinc",
     "email": "arda@ardasevinc.com",
     "url": "https://github.com/ardasevinc"
-  }, 
+  },
   "license": "MIT",
   "homepage": "https://github.com/ardasevinc/fastify-telegraf#readme",
   "repository": {
@@ -31,13 +39,20 @@
     "url": "https://github.com/ardasevinc/fastify-telegraf/issues"
   },
   "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
     "fastify-plugin": "^4.5.1",
     "telegraf": "^4.16.3",
     "undici": "^6.19.2"
   },
   "devDependencies": {
+    "@ardasevinc/prettier-config": "^0.1.4",
+    "@types/node": "^20.14.9",
     "fastify": "^4.28.1",
+    "rimraf": "^5.0.7",
     "standard": "^17.1.0",
-    "tap": "^20.0.3"
-  }
+    "tap": "^20.0.3",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.5.3"
+  },
+  "prettier": "@ardasevinc/prettier-config"
 }
