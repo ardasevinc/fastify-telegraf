@@ -45,7 +45,7 @@ const fastifyTelegrafPlugin: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
     app.decorate(decoratorBotName, bot);
     app.addHook('onClose', async function () {
       try {
-        bot.stop(); // it is sync...
+        bot.stop('server is stopping'); // it is sync...
       } catch (error) {
         app.log.warn(error, 'fastify-telegram: bot.stop() failed');
       }
