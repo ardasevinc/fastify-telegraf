@@ -15,6 +15,7 @@ const fastifyTelegrafPlugin: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
       baseUrl,
       webhookSecret,
       botToken,
+      testEnv,
       apiRoot,
       onUnhandledError = (err) => {
         app.log.error(err, 'fastify-telegram: unhandled error');
@@ -34,6 +35,7 @@ const fastifyTelegrafPlugin: FastifyPluginAsyncTypebox<FastifyTelegrafOptions> =
     const bot = new Telegraf(botToken, {
       telegram: {
         apiRoot,
+        testEnv,
         // agent: { keepAlive: true } // todo
         // const { Agent } = require('undici')
         //  new Agent({

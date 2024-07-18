@@ -7,6 +7,7 @@ const TFastifyTelegrafOptions = Type.Object({
   webhookSecret: Type.Optional(Type.String()),
   botToken: Type.Readonly(Type.String()),
   apiRoot: Type.Optional(Type.String()),
+  testEnv: Type.Optional(Type.Boolean()),
   onUnhandledError: Type.Optional(
     Type.Function([Type.Any(), Type.Any()], Type.Void()),
   ),
