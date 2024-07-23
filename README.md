@@ -1,11 +1,9 @@
 # fastify-telegram
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![ci](https://github.com/Eomm/fastify-telegram/actions/workflows/ci.yml/badge.svg)](https://github.com/Eomm/fastify-telegram/actions/workflows/ci.yml)
 
 Create and manage a Telegram bot easily.
 
-This plugin is a good wrapper around [Telegraf](https://telegraf.js.org/) built by a Fastify maintainer.
+This plugin is a wrapper around [Telegraf](https://telegraf.js.org/)
 
 Why you should use this plugin compared to what you can find on Google?
 
@@ -22,7 +20,7 @@ This plugin instead:
 ## Install
 
 ```
-npm install @eomm/fastify-telegram
+npm install @ardasevinc/fastify-telegraf
 ```
 
 ### Compatibility
